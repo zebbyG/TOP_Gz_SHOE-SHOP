@@ -225,7 +225,7 @@ report = input("Did you find your best fit: "
                "(yes/no): ")
 
 if report == 'yes':
-    print("\nPlace order to get it delivered right at your door step :) \n\nThank you and welcome back")
+    print("\nPlace order to get it delivered right at your door step :) \n\nThank you and welcome back :)")
 
 else:
     print("Sorry :(\nYou can come check later to find your best fit :). Welcome!!\n")
