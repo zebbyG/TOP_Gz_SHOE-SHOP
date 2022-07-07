@@ -246,7 +246,7 @@ if report == 'yes':
     if order == 'yes':
         import datetime
         z = datetime.datetime.now()
-        print("Your order has been successfully placed at", z)
+        print("Your order has been successfully placed at", z.strftime("%Y %b %d %A %H:%M"))
         print("\nWe will contact you for more information on your order.")
     else:
         pass
