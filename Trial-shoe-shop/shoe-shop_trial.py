@@ -59,15 +59,15 @@ all_brands.available_brands()
 # print("You did not enter any of the available brands")
 # except:
 # print("An unknown error occured please try again")
-Jordans = ["jordan 1", "jordan 11", "Mens Air Jordan 9 Retro", "jordan 3", "Women Jordan Air 1 Low SE", "Jordan v"]
+Jordans = ["Air-Jordan-1", "Jordan J11 Retro Concord (2018)", "Mens Air Jordan 9 Retro", "Air Jordan 3", "Women Jordan Air 1 Low SE", "Air Jordan v"]
 
-Nikes = ["Airmax", "Air max 270Men", "Air Jordan", "air max 95", "Nike Air", "nike dunk low"]
+Nikes = ["Airmax 95", "Air max 270Men", "Air-Force-1", "Nike Air Huarache", "Women Nike High Top", "nike dunk low"]
 
-Yeezys = ["Yeezy 700", "Yeezy 350s", "Yeezy slides", "Yeezy powerphase", "Yeezy BOOST 350v2", "Yeezy 500 Blush"]
+Yeezys = ["Yeezy 700", "Yeezy 350s", "Yeezy slides", "Yeezy powerphase", "YEEZY 450's", "Yeezy 500 Blush"]
 
-Vans = ["Vans old skool", "Vans Sk8-Hi", "Vans Slip-on", "vans Authentic", "Vans Era", "Vans Sk8"]
+Vans = ["Vans old skool", "Vans Men Sk8-Hi", "Vans Slip-on", "vans Authentic", "Vans Women high cut", "Vans Sk8-mid"]
 
-Pradas = ["Prada cloudBust", "Prada Linea Rossa", "Prada cup", "Prada Punta Ala", "Prada Sport", "Prada loafers"]
+Pradas = ["Prada cloudBust", "Prada Linea Rossa", "Prada cup", "Prada Punta Ala high", "Women Prada Pegasus", "Prada loafers"]
 
 # while True:
 # try:
