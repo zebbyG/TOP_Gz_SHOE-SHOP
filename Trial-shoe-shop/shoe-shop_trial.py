@@ -1,45 +1,65 @@
-print("THIS IS ZEBBYLION'S ONLINE SHOE SHOP\n")
+print("HEEEY!!! THIS IS ZEBBYLION'S ONLINE SHOE SHOP\n")
 
 name = input("Enter your name please: ")
 
 print("Hello!!! " + name + "\n" + "Welcome to our shop :)\n")
 
-# cont = input("Type ~yes~ to see the brand we have: ")
+# class ShoeShop
 
-brands = ["Jordans", "Nikes", "Yeezys", "Vans", "Pradas"]
-cont = input("Type ~yes~ to see the brands available: ")
-# out = False
-for c in cont:
-    if c == 'yes':
-        continue
-    # if c == 'no':
-        # out = True
-        # break
-print("\nWe have the:")
-for b in brands:
-    # if l == "Jordans" "Nikes" "Vans" "Yeezys" "Pradas":
-    print(b)
-    # else:
-    #    print("Brand not available :(\nPlease check the available brands")
+
+class ShoesShop:
+
+    def __init__(self, brand):
+        # initializing class ShoeShop
+        self.brand = brand
+
+    def available_brands(self):
+        # function to print the available brands
+        cont = input("Type ~yes~ to see brand available: ")
+        for c in cont:
+            if c:
+                continue
+        print("\nWe have:" " " + self.brand + ".")
+
+
+all_brands = ShoesShop("\n\tJordans\n\tNikes\n\tYeezys\n\tVans\n\tPradas")
+all_brands.available_brands()
+
+
+# brands = ["Jordans", "Nikes", "Yeezys", "Vans", "Pradas"]
+# cont = input("Type ~yes~ to see the brands available: ")
+# # out = False
+# for c in cont:
+#     if c == 'yes':
+#         continue
+#     # if c == 'no':
+#         # out = True
+#         # break
+# print("\nWe have the:")
+# for b in brands:
+#     # if l == "Jordans" "Nikes" "Vans" "Yeezys" "Pradas":
+#     print(b)
+#  else:
+# print("Brand not available :(\nPlease check the available brands")
 
 # print("\nThese are the brands available at our shop at the momement\n")
 
 # class Shoesshop:
-    # def __init__(self, brand):
-    #  self.brand = brand
-    # def shoe_sale(self):
-    # print("We have:" " "  + self.brand + ".")
+# def __init__(self, brand):
+#  self.brand = brand
+# def shoe_sale(self):
+# print("We have:" " "  + self.brand + ".")
 # availablebrands = Shoesshop("Jordans, Nikes, Yeezys, Vans and Pradas")
 # availablebrands.shoe_sale()
 # while True:
-    # try:
+# try:
 #       pick = str(input("Which shoe brand is your favourite:(~check spelling~):  "))
-    # break
-    # except NameError:
-    # print("You did not enter any of the available brands")
-    # except:
-    # print("An unknown error occured please try again")
-Jordans = ["jordan i", "jordan 11", "Mens Air Jordan 9 Retro", "jordan iii", "Women Jordan Air 1 Low SE", "Jordan v"]
+# break
+# except NameError:
+# print("You did not enter any of the available brands")
+# except:
+# print("An unknown error occured please try again")
+Jordans = ["jordan 1", "jordan 11", "Mens Air Jordan 9 Retro", "jordan 3", "Women Jordan Air 1 Low SE", "Jordan v"]
 
 Nikes = ["Airmax", "Air max 270Men", "Air Jordan", "air max 95", "Nike Air", "nike dunk low"]
 
@@ -92,27 +112,22 @@ pick = input("Which shoe brand is your favourite:(~check spelling~):  ")
 for j in Jordans:
     if pick == 'Jordans':
         print(j)
-# print("\nThese are some of the Jordan shoes we have")
 
 for n in Nikes:
     if pick == 'Nikes':
         print(n)
-# print("\nThese are some of the Nikes shoes we have")
 
 for y in Yeezys:
     if pick == 'Yeezys':
         print(y)
-# print("\nThese are some of the Yeezys shoes we have")
 
 for v in Vans:
     if pick == 'Vans':
         print(v)
-# print("\nThese are some of the Vans shoes we have")
 
 for p in Pradas:
     if pick == 'Pradas':
         print(p)
-# print("\nThese are some of the Pradas shoes we have")
 
 # else:
     # pass
@@ -125,7 +140,7 @@ for p in Pradas:
         # print("Check the brand spelling and try again :)")
     #    break
 
-type_shoe = input("Which shoe type in the above list do you want to buy:(~check spelling~):  ")
+type_shoe = input("Which shoe type in the above list would you want to buy:(~check spelling~):  ")
 
 if type_shoe == Jordans[0]:
     print(Jordans[0], "retails at $25.00")
