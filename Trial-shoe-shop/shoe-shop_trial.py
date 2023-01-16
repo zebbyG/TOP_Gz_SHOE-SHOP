@@ -20,6 +20,8 @@ class ShoesShop:
             if c:
                 continue
         print("\nWe have:" " " + self.brand + ".")
+        if not cont:
+            break
 
 
 all_brands = ShoesShop("\n\tJordans\n\tNikes\n\tYeezys\n\tVans\n\tPradas")
@@ -72,6 +74,8 @@ Pradas = ["Prada cloudBust", "Prada Linea Rossa", "Prada cup", "Prada Punta Ala 
 # while True:
 # try:
 pick = input("Which shoe brand is your favourite:(~check spelling~):  ")
+if not pick:
+    break
 # for b in brands:
 #     for p in pick:
 #         if p != b:
@@ -141,6 +145,8 @@ for p in Pradas:
     #    break
 
 type_shoe = input("Which shoe type in the above list would you want to buy:(~check spelling~):  ")
+if not type_shoe:
+    break
 
 if type_shoe == Jordans[0]:
     print(Jordans[0], "retails at $25.00")
@@ -255,6 +261,8 @@ else:
 
 report = input("\nDid you find your best fit: "
                "(yes/no): ")
+if not report:
+    break
 
 if report == 'yes':
     order = input("Do you want to place an order:(yes/no): ")
