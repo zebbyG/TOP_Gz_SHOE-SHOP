@@ -1,6 +1,9 @@
 print("HEEEY!!! THIS IS ZEBBYLION'S ONLINE SHOE SHOP\n")
 
 name = input("Enter your name please: ")
+if not name:
+    error_msg('Cancelled...You MUST enter a name")
+              break
 
 print("Hello!!! " + name + "\n" + "Welcome to our shop :)\n")
 
