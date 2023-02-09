@@ -1,19 +1,12 @@
 print("HEEEY!!! THIS IS ZEBBYLION'S ONLINE SHOE SHOP\n")
 
 name = input("Enter your name please: ")
-for n in name:
-    if not name:
-        print("Cancelled...You MUST enter a name")
-        break
-    else:
-        continue
 
 print("Hello!!! " + name + "\n" + "Welcome to our shop :)\n")
 
-# class ShoeShop
-
 
 class ShoesShop:
+    # class ShoeShop
 
     def __init__(self, brand):
         # initializing class ShoeShop
@@ -21,13 +14,7 @@ class ShoesShop:
 
     def available_brands(self):
         # function to print the available brands
-        cont = input("Type ~yes~ to see brand available: ")
-        for c in cont:
-            if not c:
-                print("Cancelled...You did NOT type yes")
-                break
-            else:
-                continue
+        cont = input("press any enter to see available brands")
         print("\nWe have:" " " + self.brand + ".")
 
 
@@ -81,12 +68,6 @@ Pradas = ["Prada cloudBust", "Prada Linea Rossa", "Prada cup", "Prada Punta Ala 
 # while True:
 # try:
 pick = input("Which shoe brand is your favourite:(~check spelling~):  ")
-for p in pick:
-    if not pick:
-        print("Cancelled...You have to choose a brand ")
-        break
-    else:
-        continue
 # for b in brands:
 #     for p in pick:
 #         if p != b:
@@ -155,13 +136,8 @@ for p in Pradas:
         # print("Check the brand spelling and try again :)")
     #    break
 
+
 type_shoe = input("Which shoe type in the above list would you want to buy:(~check spelling~):  ")
-for t in type_shoe:
-    if not t:
-        print("Cancelled...You did NOT enter a shoe name")
-        break
-    else:
-        continue
 
 if type_shoe == Jordans[0]:
     print(Jordans[0], "retails at $25.00")
@@ -276,11 +252,11 @@ else:
 
 report = input("\nDid you find your best fit: "
                "(yes/no): ")
-for r in report:
-    if not r:
-        break
-    else:
-        continue
+# for r in report:
+#     if not r:
+#         break
+#     else:
+#         continue
 
 if report == 'yes':
     order = input("Do you want to place an order:(yes/no): ")
@@ -292,7 +268,7 @@ if report == 'yes':
     if order == 'yes':
         import datetime
         z = datetime.datetime.now()
-        print("Your order has been successfully placed at", z.strftime("%Y %b %d %A %H:%M"))
+        print("\033[32mYour order has been successfully placed at\033[0m", z.strftime("%Y %b %d %A %H:%M"))
         print("\nWe will contact you for more information on your order.")
     else:
         pass
@@ -300,4 +276,4 @@ if report == 'yes':
 else:
     print("Sorry :(\nYou can come check later to find your best fit :). Welcome!!\n")
 
-print("\nTHANKS FOR VISITING ZEBBYLION'S ONLINE SHOE SHOP :)\nHope to see you again soon")
+print("\n\033[32mTHANKS FOR VISITING ZEBBYLION'S ONLINE SHOE SHOP :)\nHope to see you again soon\033[0m")
