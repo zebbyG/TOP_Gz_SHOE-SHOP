@@ -189,11 +189,7 @@ if report == 'yes' or report == 'y':
             break
         else:
             print("\033[1;31m Cannot be empty\033[0m")
-    # for o in order:
-    #     if not o:
-    #         break
-    #     else:
-    #         continue
+
     if order == 'yes' or order == 'y':
         import datetime
         z = datetime.datetime.now()
