@@ -193,13 +193,14 @@ if report == 'yes' or report == 'y':
     if order == 'yes' or order == 'y':
         import datetime
         z = datetime.datetime.now()
-        print("\033[32mYour order has been successfully placed at\033[0m", z.strftime("%Y %b %d %A %H:%M:%S"))
+        print(f"\033[1;36m{name}\033[0m\033[32m your order has been successfully placed at\033[0m", z.strftime("%Y %b %d %A %H:%M:%S"))
         print("\nWe will contact you for more information on your order.")
     else:
         pass
 
 else:
-    print("\033[1;33mSorry :(\nYou can come check later to find your best fit :). Welcome!!\n\033[0m")
+    print(f"\033[1;33mSorry\033[0m \033[1;36m {name} \033[0m:(\n"
+          f"\033[1;33mYou can come check later to find your best fit :). Welcome!!\n\033[0m")
 
 print("\n\033[1;32mTHANKS FOR VISITING ZEBBYLION'S ONLINE SHOE SHOP :)\033[0m\033[1;36m\n"
       "Hope to see you again soon\033[0m")
