@@ -4,8 +4,7 @@ while True:
     name = input("Enter your name please: ")
     if name:
         break
-    else:
-        print("\033[1;31mError: Name cannot be empty. Please try again.\033[0m")
+    print("\033[1;31mError: Name cannot be empty. Please try again.\033[0m")
 
 print("Hello!!!\033[33m " + name + "\033[0m\n" + "Welcome to our shop \033[32m:)\033[0m\n")
 
