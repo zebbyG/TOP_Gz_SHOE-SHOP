@@ -19,4 +19,4 @@ def print_and_delete(message, words_to_delete, delay):
     for word in words_to_delete:
         message = message.replace(word, ' ' * len(word))
     os.system('cls' if os.name == 'nt' else 'clear')
-    return Fore.GREEN + "\nACCOUNT CREATED SUCCESSFULLY" + Style.RESET_ALL
+    return Fore.GREEN + "\n" + Style.RESET_ALL
