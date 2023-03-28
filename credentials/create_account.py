@@ -1,5 +1,3 @@
-import time
-
 from colorama import init, Fore, Style
 import getpass
 from credentials import var_global, del_user_credentials
@@ -12,9 +10,8 @@ CREATE NEW ACCOUNT
 
 def create_account():
     """
-    :Function to create a new Account for user.
+    Function to create a new Account for user.
     """
-    global password
     var_global.created_accounts = {}
     print("-" * 50)
     print(Fore.BLUE + "CREATE NEW ACCOUNT" + Style.RESET_ALL)
@@ -25,9 +22,9 @@ def create_account():
     while True:
         # PROMPT USER_EMAIL
         try:
-            print("Enter your email")
+            print(Fore.LIGHTMAGENTA_EX + "Enter your email\n" + Style.RESET_ALL)
             user_email = input().strip().lower()
-            if not user_email.endswith("@gmail.com"):
+            if not user_email.endswith(".com"):
                 raise ValueError
             break
         except ValueError:
@@ -35,7 +32,7 @@ def create_account():
 
     while True:
         # PROMPT USER_NAME
-        print("Enter username: ")
+        print(Fore.LIGHTMAGENTA_EX + "\nEnter username\n" + Style.RESET_ALL)
         var_global.new_user_name = input().strip()
         if var_global.new_user_name:
             break
@@ -50,11 +47,12 @@ def create_account():
               + Fore.RED + " ~no~" + Style.RESET_ALL + " to continue invisibly" + Style.RESET_ALL + "]")
         see_password = input().strip().lower()
 
-        if see_password == "no":
+        if see_password == "no" or see_password == "n":
             while True:
                 # INVISIBLE PASSWORD INPUT
                 try:
-                    var_global.password = getpass.getpass(prompt='Enter your password: ', stream=None)
+                    var_global.password = getpass.getpass(prompt=Fore.LIGHTMAGENTA_EX + '\nEnter password\n'
+                                                          + Style.RESET_ALL, stream=None)
                     if len(var_global.password) < 8:
                         raise ValueError
                     break
@@ -64,7 +62,8 @@ def create_account():
             while True:
                 # INVISIBLE CONFIRM_PASSWORD INPUT
                 try:
-                    confirm_password = getpass.getpass(prompt='Confirm password', stream=None)
+                    confirm_password = getpass.getpass(prompt=Fore.LIGHTMAGENTA_EX + '\nConfirm password\n'
+                                                       + Style.RESET_ALL, stream=None)
                     if len(confirm_password) < 8 or confirm_password != var_global.password:
                         raise ValueError
                     break
@@ -73,11 +72,11 @@ def create_account():
 
             break
 
-        elif see_password == "yes":
+        elif see_password == "yes" or see_password == "y":
             # VISIBLE PASSWORD INPUT
             while True:
                 try:
-                    print("Enter new password")
+                    print(Fore.LIGHTMAGENTA_EX + "\nEnter password\n" + Style.RESET_ALL)
                     var_global.password = input().strip()
                     if len(var_global.password) < 8:
                         raise ValueError
@@ -88,7 +87,7 @@ def create_account():
             while True:
                 # VISIBLE CONFIRM_PASSWORD INPUT
                 try:
-                    print("Confirm your password")
+                    print(Fore.LIGHTMAGENTA_EX + "\nConfirm your password\n" + Style.RESET_ALL)
                     confirm_password = input().strip()
                     if confirm_password != var_global.password:
                         raise ValueError
@@ -108,26 +107,35 @@ def create_account():
         "password": var_global.password
     }
 
-    # TO PRINT AND DELETE USER CREDENTIALS IN 10 SECONDS
-    print(del_user_credentials.print_and_delete(Fore.RED + "\nCOPY YOUR CREDENTIALS SOMEWHERE SAFE:\n" + Style.RESET_ALL +
-                                                "\nCreating account for " + Fore.LIGHTMAGENTA_EX + f"{user_email}" + Style.RESET_ALL
-                                                + " with username " + Fore.GREEN + f"{var_global.new_user_name}" + Style.RESET_ALL +
-                                                " and password " + Fore.LIGHTBLUE_EX + f"{var_global.password}\n" + Style.RESET_ALL,
+    # TO PRINT AND DELETE USER CREDENTIALS IN 9 SECONDS
+    print(del_user_credentials.print_and_delete(Fore.RED + "\nCOPY YOUR CREDENTIALS SOMEWHERE SAFE:\n" + Style.RESET_ALL
+                                                + "\nCreating account for " + Fore.LIGHTMAGENTA_EX + f"{user_email}"
+                                                + Style.RESET_ALL + " with username " + Fore.GREEN +
+                                                f"{var_global.new_user_name}" + Style.RESET_ALL + " and password " +
+                                                Fore.LIGHTBLUE_EX + f"{var_global.password}\n" + Fore.LIGHTYELLOW_EX +
+                                                "creating your account...\n" + Style.RESET_ALL,
+
                                                 Fore.RED + "Copy your credentials somewhere safe" + Style.RESET_ALL +
                                                 "Account created for " + Fore.YELLOW + f"{user_email}" + Style.RESET_ALL
-                                                + " with username " + Fore.GREEN + f"{var_global.new_user_name}" + Style.RESET_ALL +
-                                                " and password " + Fore.LIGHTBLUE_EX + f"{var_global.password}" + Style.RESET_ALL
-                                                , 7))
+                                                + " with username " + Fore.GREEN + f"{var_global.new_user_name}"
+                                                + Style.RESET_ALL +
+                                                " and password " + Fore.LIGHTBLUE_EX + f"{var_global.password}"
+                                                + Style.RESET_ALL, 9))
 
-    print("\nconfirm your credentials" + Fore.YELLOW +"[y]" + Style.RESET_ALL + "\ncontinue" + Fore.GREEN + "[n]" +Style.RESET_ALL)
+    print("confirm your credentials" + Fore.YELLOW + "[y]" + Style.RESET_ALL
+          + "\ncontinue" + Fore.GREEN + "[n]" + Style.RESET_ALL)
     print(Fore.RED + "\nyou won't be able to see this information again." + Style.RESET_ALL)
     confirm_credentials = input().strip().lower()
-    for c in confirm_credentials:
-        if c == "y":
-            print(var_global.created_accounts)
-            time.sleep(5)
-            print("\033[H\033[J")
-            print(Fore.YELLOW + "redirecting..." + Style.RESET_ALL)
-            time.sleep(2)
-        else:
-            continue
+    if confirm_credentials == "y":
+        # TO PRINT AND DELETE USER CREDENTIALS AGAIN IN 5 SECONDS
+        print(del_user_credentials.print_and_delete(f"username:" + Fore.GREEN +
+                                                    f"{var_global.created_accounts[user_email]['username']}"
+                                                    + Style.RESET_ALL
+                                                    + f"\npassword:" + Fore.LIGHTBLUE_EX +
+                                                    f"{var_global.created_accounts[user_email]['password']}"
+                                                    + Style.RESET_ALL, f"username:" + Fore.GREEN +
+                                                    f"{var_global.created_accounts[user_email]['username']}"
+                                                    + Style.RESET_ALL
+                                                    + f"password:" + Fore.LIGHTBLUE_EX +
+                                                    f"{var_global.created_accounts[user_email]['password']}"
+                                                    + Style.RESET_ALL, 5))
