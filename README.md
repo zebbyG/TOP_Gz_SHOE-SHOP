@@ -2,4 +2,4 @@
 
 + [x] `WALK WITH CONFIDENCE`
 
-+ [x] <a href="https://github.com/zebbyG?tab=repositories">zebbyG</a>
++ [x] <a href="https://github.com/">zebbyG</a>

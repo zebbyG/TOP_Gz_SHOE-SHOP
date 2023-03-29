@@ -1,5 +1,6 @@
-This is `TOP G'z ONLINE SHOE SHOP`.
++ [x] `TOP G'z ONLINE SHOE SHOP`.
 
- + [x] Author:
-
- + [x] <a href="https://github.com/zebbyG?tab=repositories">zebbyG</a>
+`FUNCTIONS TO HELP USER CREATE ACCOUNT AND LOG IN`
+`FUNCTION TO EXIT APP`
+`FUNCTION TO DELETE CREDENTIALS AFTER CREATING ACCOUNT`
+`GLOBAL VARIABLES`
