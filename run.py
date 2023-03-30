@@ -59,8 +59,6 @@ elif choice == 2:
     create_account.create_account()
     log_in.log_in()
 elif choice == 3:
-    print(Fore.RED + "exiting app..." + Style.RESET_ALL)
-    time.sleep(3)
     exit_app.exit_app()
 
 # SERVICE OPTIONS
