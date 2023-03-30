@@ -94,7 +94,7 @@ def place_order():
                 raise ValueError
             break  # exit the loop if the input is valid
         except ValueError:
-            print(Fore.RED + "Invalid input enter a valid number" + Style.RESET_ALL)
+            print(Fore.RED + "Invalid input enter a valid number\n" + Style.RESET_ALL)
 
     if continue_exit == 1:
         pass
@@ -117,25 +117,25 @@ def place_order():
         "number_of_pairs": str(var_global.order_amount),
     }
     if var_global.pick == 1:
-        add_jordans = {"Total Amount": var_global.jordans[var_global.type_shoe]}
+        add_jordans = {"Total Amount": f"${int(var_global.jordans[var_global.type_shoe]) * var_global.order_amount}"}
         order.update(add_jordans)
     elif var_global.pick == 2:
-        add_nikes = {"Total Amount": var_global.nikes[var_global.type_shoe]}
+        add_nikes = {"Total Amount": f"${int(var_global.nikes[var_global.type_shoe]) * var_global.order_amount}"}
         order.update(add_nikes)
     elif var_global.pick == 3:
-        add_yeezys = {"Total Amount": var_global.yeezys[var_global.type_shoe]}
+        add_yeezys = {"Total Amount": f"${int(var_global.yeezys[var_global.type_shoe]) * var_global.order_amount}"}
         order.update(add_yeezys)
     elif var_global.pick == 4:
-        add_vans = {"Total Amount": var_global.vans[var_global.type_shoe]}
+        add_vans = {"Total Amount": f"${int(var_global.vans[var_global.type_shoe]) * var_global.order_amount}"}
         order.update(add_vans)
     elif var_global.pick == 5:
-        add_pradas = {"Total Amount": var_global.pradas[var_global.type_shoe]}
+        add_pradas = {"Total Amount": f"${int(var_global.pradas[var_global.type_shoe]) * var_global.order_amount}"}
         order.update(add_pradas)
 
     print(Fore.YELLOW + "loading order details...\n" + Style.RESET_ALL)
     time.sleep(2)
     for key, value in order.items():
-        print(key + ": " + Fore.LIGHTMAGENTA_EX + value + Style.RESET_ALL)
+        print(key + ": " + Fore.LIGHTMAGENTA_EX + str(value) + Style.RESET_ALL)
 
     print(Fore.YELLOW + "\nconfirming your order...\n")
     time.sleep(3)
