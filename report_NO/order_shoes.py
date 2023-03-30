@@ -146,7 +146,8 @@ def place_order():
                        f" has been successfully placed on\033[0m",
           z.strftime("%A %d %b %Y at %H:%M:%S"))
     time.sleep(2)
-    print(Fore.LIGHTMAGENTA_EX + "\nWe will contact you for more information on your order.\033[0m")
+    print(Fore.LIGHTMAGENTA_EX + f"\nWe will contact you trough your email {var_global.user_email} "
+                                 f"for more information on your order.\033[0m")
     time.sleep(1.5)
     print(Fore.GREEN + "\nTHANKS FOR VISITING TOP_G'z ONLINE SHOE SHOP :)\033[0m"
           + Fore.BLUE + "\nHope to see you again soon\033[0m")
