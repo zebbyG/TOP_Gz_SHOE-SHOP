@@ -12,3 +12,4 @@ global nikes
 global pradas
 global vans
 global yeezys
+global user_email
