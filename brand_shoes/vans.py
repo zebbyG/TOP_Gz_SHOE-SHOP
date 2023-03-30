@@ -6,11 +6,19 @@ init()
 
 def display_vans():
     """
-    :return: vans shoes
+    print vans shoes and price
     """
-    vans = ["Vans old skool", "Vans Men Sk8-Hi", "Vans Slip-on", "vans Authentic", "Vans Women high cut",
-            "Vans Sk8-mid"]
-    for v in vans:
+    var_global.vans = {
+        "Vans old skool": "$150",
+        "Vans Men Sk8-Hi": "213",
+        "Vans Slip-on": "$229",
+        "vans Authentic": "$160",
+        "Vans Women high cut": "$223",
+        "Vans Sk8-mid": "$117"
+    }
+    # vans = ["Vans old skool", "Vans Men Sk8-Hi", "Vans Slip-on", "vans Authentic", "Vans Women high cut",
+    #         "Vans Sk8-mid"]
+    for v in var_global.vans.keys():
         print(v)
 
     while True:
@@ -22,23 +30,23 @@ def display_vans():
         else:
             print(Fore.RED + "Cannot be empty. Please choose a shoe type\033[0m")
 
-    if var_global.type_shoe == vans[0]:
-        print(vans[0], "retails at" + Fore.BLUE + " $15.00\033[0m")
+    if var_global.type_shoe == "Vans old skool":
+        print(f"{var_global.type_shoe} retails at" + Fore.BLUE + f" {var_global.vans[var_global.type_shoe]}\033[0m")
 
-    elif var_global.type_shoe == vans[1]:
-        print(vans[1], "retails at" + Fore.BLUE + " $21.39\033[0m")
+    elif var_global.type_shoe == "Vans Men Sk8-Hi":
+        print(f"{var_global.type_shoe} retails at" + Fore.BLUE + f" {var_global.vans[var_global.type_shoe]}\033[0m")
 
-    elif var_global.type_shoe == vans[2]:
-        print(vans[2], "retails at" + Fore.BLUE + " $22.90\033[0m")
+    elif var_global.type_shoe == "Vans Slip-on":
+        print(f"{var_global.type_shoe} retails at" + Fore.BLUE + f" {var_global.vans[var_global.type_shoe]}\033[0m")
 
-    elif var_global.type_shoe == vans[3]:
-        print(vans[3], "retails at" + Fore.BLUE + " $17.00\033[0m")
+    elif var_global.type_shoe == "vans Authentic":
+        print(f"{var_global.type_shoe} retails at" + Fore.BLUE + f" {var_global.vans[var_global.type_shoe]}\033[0m")
 
-    elif var_global.type_shoe == vans[4]:
-        print(vans[4], "retails at" + Fore.BLUE + " $22.30\033[0m")
+    elif var_global.type_shoe == "Vans Women high cut":
+        print(f"{var_global.type_shoe} retails at" + Fore.BLUE + f" {var_global.vans[var_global.type_shoe]}\033[0m")
 
-    elif var_global.type_shoe == vans[5]:
-        print(vans[5], "retails at" + Fore.BLUE + " $27.25\033[0m")
+    elif var_global.type_shoe == "Vans Sk8-mid":
+        print(f"{var_global.type_shoe} retails at" + Fore.BLUE + f" {var_global.vans[var_global.type_shoe]}\033[0m")
 
     else:
         print(Fore.RED + "shoe not found recheck and enter available shoes\n" + Style.RESET_ALL)
