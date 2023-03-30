@@ -4,6 +4,9 @@ init()
 
 
 def choose_brand():
+    """
+    choose a brand
+    """
     while True:
         try:
             var_global.pick = int(input(Fore.LIGHTMAGENTA_EX + "CHOOSE BRAND:(~enter number~)\n"
