@@ -15,7 +15,7 @@ def log_in():
     Function to log in
     """
     print(Fore.GREEN + "ACCOUNT CREATED SUCCESSFULLY" + Style.RESET_ALL)
-    time.sleep(3)
+    time.sleep(2)
     print(del_user_credentials.print_and_delete(Fore.YELLOW + "redirecting to log_in..."
                                                 + Style.RESET_ALL, "redirecting to log_in...", 3))
 
@@ -37,4 +37,3 @@ def log_in():
             print(Fore.RED + "username or password is incorrect...try again with correct credentials" + Style.RESET_ALL)
 
     print(Fore.GREEN + "LOGGED IN SUCCESSFULLY" + Style.RESET_ALL)
-
