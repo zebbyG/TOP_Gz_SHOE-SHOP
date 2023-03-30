@@ -3,6 +3,7 @@ import time
 from credentials import create_account, log_in, exit_app, var_global
 from brand_shoes import brands, display_conditions
 from report_NO import brand_choose, fit_check
+
 init()
 
 """
