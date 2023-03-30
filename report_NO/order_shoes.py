@@ -115,8 +115,23 @@ def place_order():
         "Brand": var_global.brand[str(var_global.pick)],
         "shoe_type": var_global.type_shoe,
         "number_of_pairs": str(var_global.order_amount),
-        "Total Amount": var_global.jordans[var_global.type_shoe]
     }
+    if var_global.pick == 1:
+        add_jordans = {"Total Amount": var_global.jordans[var_global.type_shoe]}
+        order.update(add_jordans)
+    elif var_global.pick == 2:
+        add_nikes = {"Total Amount": var_global.nikes[var_global.type_shoe]}
+        order.update(add_nikes)
+    elif var_global.pick == 3:
+        add_yeezys = {"Total Amount": var_global.yeezys[var_global.type_shoe]}
+        order.update(add_yeezys)
+    elif var_global.pick == 4:
+        add_vans = {"Total Amount": var_global.vans[var_global.type_shoe]}
+        order.update(add_vans)
+    elif var_global.pick == 5:
+        add_pradas = {"Total Amount": var_global.pradas[var_global.type_shoe]}
+        order.update(add_pradas)
+
     print(Fore.YELLOW + "loading order details...\n" + Style.RESET_ALL)
     time.sleep(2)
     for key, value in order.items():
