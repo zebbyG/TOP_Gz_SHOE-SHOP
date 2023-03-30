@@ -1,6 +1,7 @@
 from colorama import init, Fore, Style
 import getpass
 from credentials import var_global, del_user_credentials
+
 init()
 
 """
