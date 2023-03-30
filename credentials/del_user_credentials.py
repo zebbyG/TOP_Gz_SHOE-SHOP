@@ -10,9 +10,9 @@ init()
 def print_and_delete(message, words_to_delete, delay):
     """
     Function to delete credentials after creating account.
-    :param message: Initial message.
-    :param words_to_delete: words to remove for message.
-    :param delay: time to delay before deleting words_to_delete in message.
+    message: Initial message.
+    words_to_delete: words to remove for message.
+    delay: time to delay before deleting words_to_delete in message.
     """
     print(message)
     time.sleep(delay)
