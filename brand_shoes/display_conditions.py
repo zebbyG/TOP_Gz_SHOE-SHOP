@@ -3,6 +3,9 @@ from credentials import var_global
 
 
 def print_shoes():
+    """
+    To call each function brand to print its shoes
+    """
     if var_global.pick == 1:
         jordans.display_jordans()
 
