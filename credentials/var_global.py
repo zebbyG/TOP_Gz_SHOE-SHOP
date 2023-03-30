@@ -1,4 +1,4 @@
-# Global variables used
+# Global variables used in project
 global type_shoe
 global password
 global new_user_name
