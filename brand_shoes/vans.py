@@ -1,4 +1,5 @@
 from colorama import init, Fore, Style
+from credentials import var_global
 
 init()
 
@@ -14,29 +15,29 @@ def display_vans() -> str:
 
     while True:
         print(Fore.LIGHTMAGENTA_EX + "CHOOSE SHOE(~check spelling~)\n" + Style.RESET_ALL)
-        type_shoe = input()
+        var_global.type_shoe = input()
         print("")
-        if type_shoe:
+        if var_global.type_shoe:
             break
         else:
             print(Fore.RED + "Cannot be empty. Please choose a shoe type\033[0m")
 
-    if type_shoe == vans[0]:
+    if var_global.type_shoe == vans[0]:
         print(vans[0], "retails at" + Fore.BLUE + " $15.00\033[0m")
 
-    elif type_shoe == vans[1]:
+    elif var_global.type_shoe == vans[1]:
         print(vans[1], "retails at" + Fore.BLUE + " $21.39\033[0m")
 
-    elif type_shoe == vans[2]:
+    elif var_global.type_shoe == vans[2]:
         print(vans[2], "retails at" + Fore.BLUE + " $22.90\033[0m")
 
-    elif type_shoe == vans[3]:
+    elif var_global.type_shoe == vans[3]:
         print(vans[3], "retails at" + Fore.BLUE + " $17.00\033[0m")
 
-    elif type_shoe == vans[4]:
+    elif var_global.type_shoe == vans[4]:
         print(vans[4], "retails at" + Fore.BLUE + " $22.30\033[0m")
 
-    elif type_shoe == vans[5]:
+    elif var_global.type_shoe == vans[5]:
         print(vans[5], "retails at" + Fore.BLUE + " $27.25\033[0m")
 
     else:
