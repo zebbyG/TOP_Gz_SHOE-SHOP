@@ -41,4 +41,5 @@ def display_vans():
         print(vans[5], "retails at" + Fore.BLUE + " $27.25\033[0m")
 
     else:
-        pass
+        print(Fore.RED + "shoe not found recheck and enter available shoes" + Style.RESET_ALL)
+        display_vans()
