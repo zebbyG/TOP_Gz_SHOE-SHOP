@@ -49,5 +49,5 @@ def display_vans():
         print(f"{var_global.type_shoe} retails at" + Fore.BLUE + f" {var_global.vans[var_global.type_shoe]}\033[0m")
 
     else:
-        print(Fore.RED + "shoe not found recheck and enter available shoes\n" + Style.RESET_ALL)
+        print(Fore.RED + f"shoe {var_global.type_shoe} not found recheck and enter available shoes\n" + Style.RESET_ALL)
         display_vans()
