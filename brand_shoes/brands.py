@@ -6,7 +6,7 @@ init()
 
 def print_brands():
     """
-    :return: the brands available
+    print the brands available in the shop
     """
     var_global.brand = {
         "1": "Jordan",
