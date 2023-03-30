@@ -12,7 +12,7 @@ LOG IN TO YOUR ACCOUNT
 
 def log_in():
     """"
-    :Function to log in
+    Function to log in
     """
     print(Fore.GREEN + "ACCOUNT CREATED SUCCESSFULLY" + Style.RESET_ALL)
     time.sleep(3)
