@@ -38,7 +38,7 @@ def create_account():
         if var_global.new_user_name:
             break
         else:
-            print(Fore.RED + "Required field cannot be empty" + Style.RESET_ALL)
+            print(Fore.RED + "required field cannot be empty" + Style.RESET_ALL)
 
 # PROMPT PASSWORD INPUT TYPE (VISIBLE/INVISIBLE)
 
@@ -121,7 +121,7 @@ def create_account():
                                                 + " with username " + Fore.GREEN + f"{var_global.new_user_name}"
                                                 + Style.RESET_ALL +
                                                 " and password " + Fore.LIGHTBLUE_EX + f"{var_global.password}"
-                                                + Style.RESET_ALL, 9))
+                                                + Style.RESET_ALL, 8))
 
     print("confirm your credentials" + Fore.YELLOW + "[y]" + Style.RESET_ALL
           + "\ncontinue" + Fore.GREEN + "[n]" + Style.RESET_ALL)
