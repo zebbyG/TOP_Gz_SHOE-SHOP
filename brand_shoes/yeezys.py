@@ -4,9 +4,19 @@ init()
 
 
 def display_yeezys():
-    yeezys = ["Yeezy 700", "Yeezy 350s", "Yeezy slides", "Yeezy powerphase",
-              "YEEZY 450's", "Yeezy 500 Blush"]
-    for y in yeezys:
+    """
+    print yeezy shoes and price
+    """
+    var_global.yeezys = {
+        "Yeezy 700": "$260",
+        "Yeezy 350s": "$177",
+        "Yeezy slides": "$93",
+        "Yeezy powerphase": "$218",
+        "YEEZY 450's": "$180",
+        "Yeezy 500 Blush": "$103"
+    }
+
+    for y in var_global.yeezys:
         print(y)
 
     while True:
@@ -18,23 +28,23 @@ def display_yeezys():
         else:
             print(Fore.RED + "Cannot be empty. Please choose a shoe type\033[0m")
 
-    if var_global.type_shoe == yeezys[0]:
-        print(yeezys[0], "retails at" + Fore.BLUE + " $26.00\033[0m")
+    if var_global.type_shoe == "Yeezy 700":
+        print(f"{var_global.type_shoe} retails at" + Fore.BLUE + f" {var_global.yeezys[var_global.type_shoe]}\033[0m")
 
-    elif var_global.type_shoe == yeezys[1]:
-        print(yeezys[1], "retails at" + Fore.BLUE + " $39.00\033[0m")
+    elif var_global.type_shoe == "Yeezy 350s":
+        print(f"{var_global.type_shoe} retails at" + Fore.BLUE + f" {var_global.yeezys[var_global.type_shoe]}\033[0m")
 
-    elif var_global.type_shoe == yeezys[2]:
-        print(yeezys[2], "retails at" + Fore.BLUE + " $19.80\033[0m")
+    elif var_global.type_shoe == "Yeezy slides":
+        print(f"{var_global.type_shoe} retails at" + Fore.BLUE + f" {var_global.yeezys[var_global.type_shoe]}\033[0m")
 
-    elif var_global.type_shoe == yeezys[3]:
-        print(yeezys[3], "retails at" + Fore.BLUE + " $21.85\033[0m")
+    elif var_global.type_shoe == "Yeezy powerphase":
+        print(f"{var_global.type_shoe} retails at" + Fore.BLUE + f" {var_global.yeezys[var_global.type_shoe]}\033[0m")
 
-    elif var_global.type_shoe == yeezys[4]:
-        print(yeezys[4], "retails at" + Fore.BLUE + " $18.00\033[0m")
+    elif var_global.type_shoe == "YEEZY 450's":
+        print(f"{var_global.type_shoe} retails at" + Fore.BLUE + f" {var_global.yeezys[var_global.type_shoe]}\033[0m")
 
-    elif var_global.type_shoe == yeezys[5]:
-        print(yeezys[5], "retails at" + Fore.BLUE + " $24.90\033[0m")
+    elif var_global.type_shoe == "Yeezy 500 Blush":
+        print(f"{var_global.type_shoe} retails at" + Fore.BLUE + f" {var_global.yeezys[var_global.type_shoe]}\033[0m")
 
     else:
         print(Fore.RED + "shoe not found recheck and enter available shoes\n" + Style.RESET_ALL)
