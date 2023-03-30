@@ -7,3 +7,8 @@ global brand
 global pick
 global report
 global order_amount
+global jordans
+global nikes
+global pradas
+global vans
+global yeezys
