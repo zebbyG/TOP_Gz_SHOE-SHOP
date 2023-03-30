@@ -1,8 +1,10 @@
-from colorama import init, Fore, Style
 import time
+
+from colorama import init, Fore, Style
+# import time
 from credentials import exit_app, var_global
 from brand_shoes import brands, display_conditions
-from report_NO import brand_choose
+from report_NO import brand_choose, order_shoes
 
 init()
 
@@ -32,12 +34,11 @@ def check_fit():
         else:
             print(Fore.BLUE + f"Sorry {var_global.new_user_name} \033[0m.\n" +
                   Fore.YELLOW + "You can come check later to find your best fit :). Welcome!!\n\033[0m")
+            time.sleep(1)
+            print(Fore.GREEN + "\nTHANKS FOR VISITING TOP_G'z ONLINE SHOE SHOP :)\033[0m"
+                  + Fore.BLUE + "\nHope to see you again soon\033[0m")
+            exit_app.exit_app()
 
-        print(Fore.GREEN + "\nTHANKS FOR VISITING ZEBBYLION'S ONLINE SHOE SHOP :)\033[0m"
-              + Fore.BLUE + "\nHope to see you again soon\033[0m")
-        print(Fore.RED + "exiting..." + Style.RESET_ALL)
-        time.sleep(3)
-        exit_app.exit_app()
     if var_global.report == 'yes' or var_global.report == 'y':
         while True:
             order = input(
@@ -48,11 +49,8 @@ def check_fit():
                 print(Fore.RED + "Cannot be empty\033[0m")
 
         if order == 'yes' or order == 'y':
-            import datetime
-            z = datetime.datetime.now()
-            print(Fore.BLUE + f"{var_global.new_user_name}\033[0m" +
-                  Fore.GREEN + " your order has been successfully placed at\033[0m",
-                  z.strftime("%Y %b %d %A %H:%M:%S"))
-            print(Fore.LIGHTMAGENTA_EX + "\nWe will contact you for more information on your order.\033[0m")
+            order_shoes.place_order()
         else:
-            pass
+            print(Fore.GREEN + "\nTHANKS FOR VISITING TOP_G'z ONLINE SHOE SHOP :)\033[0m"
+                  + Fore.BLUE + "\nHope to see you again soon\033[0m")
+            exit_app.exit_app()
