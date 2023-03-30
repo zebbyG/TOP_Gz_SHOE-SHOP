@@ -10,6 +10,9 @@ init()
 
 
 def check_fit():
+    """
+    check if user found a shoe/would want to place an order
+    """
     while True:
         var_global.report = input(
             Fore.LIGHTMAGENTA_EX + "\nDid you find your best fit: (yes[y]~~no[n])\n\033[0m").lower().strip()
