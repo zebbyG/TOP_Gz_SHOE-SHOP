@@ -39,5 +39,5 @@ def display_nikes():
         print(nikes[5], "retails at" + Fore.BLUE + " $94.90\033[0m")
 
     else:
-        print(Fore.RED + "shoe not found recheck and enter available shoes" + Style.RESET_ALL)
+        print(Fore.RED + "shoe not found recheck and enter available shoes\n" + Style.RESET_ALL)
         display_nikes()
