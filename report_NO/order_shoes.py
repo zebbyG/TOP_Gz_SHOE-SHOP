@@ -7,7 +7,7 @@ init()
 
 def place_order():
     """
-
+    To place an order for user
     """
     while True:
         # PROMPT LOCATION
