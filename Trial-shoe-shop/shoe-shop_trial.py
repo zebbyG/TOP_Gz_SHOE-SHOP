@@ -1,6 +1,6 @@
 from colorama import init, Fore
 init()
-print("HEEEY!!! THIS IS ZEBBYLION'S ONLINE SHOE SHOP\n")
+print("HEY!!! THIS IS ZEBBYLION'S ONLINE SHOE SHOP\n")
 
 while True:
     name = input("Enter your name please: ")
