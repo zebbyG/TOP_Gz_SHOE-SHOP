@@ -1,7 +1,5 @@
-import time
-
 from colorama import init, Fore, Style
-# import time
+import time
 from credentials import exit_app, var_global
 from brand_shoes import brands, display_conditions
 from report_NO import brand_choose, order_shoes
@@ -19,27 +17,30 @@ def check_fit():
         if var_global.report:
             break
         else:
-            print(Fore.RED + "Cannot be empty\033[0m")
+            print(Fore.RED + "required field\033[0m")
     if var_global.report == "no" or var_global.report == "n":
-        print(Fore.BLUE + "would you like to check shoes in other brands[y]/[n]" + Style.RESET_ALL)
-        check_other = input().lower().strip()
-        if check_other:
+        while True:
+            try:
+                check_other = {
+                    "1": "Back to main menu",
+                    "2": "exit"
+                    }
+                time.sleep(0.6)
+                print(Fore.YELLOW + f"1: {check_other['1']}\n" + Fore.RED + f"2: {check_other['2']}\n" +
+                      Style.RESET_ALL)
+                check_other = int(input().strip())
+                if check_other < 1 or check_other > 2:
+                    raise ValueError
+                break
+            except ValueError:
+                print(Fore.RED + "invalid choice" + Style.RESET_ALL)
+        if check_other == 1:
             brands.print_brands()
             brand_choose.choose_brand()
             display_conditions.print_shoes()
             check_fit()
-        elif check_other == "y" or check_other == "yes":
-            brands.print_brands()
-            brand_choose.choose_brand()
-            display_conditions.print_shoes()
-            check_fit()
-
-        else:
-            print(Fore.BLUE + f"Sorry {var_global.new_user_name} \033[0m.\n" +
-                  Fore.YELLOW + "You can come check later to find your best fit :). Welcome!!\n\033[0m")
-            time.sleep(1)
-            print(Fore.GREEN + "\nTHANKS FOR VISITING TOP_G'z ONLINE SHOE SHOP :)\033[0m"
-                  + Fore.BLUE + "\nHope to see you again soon\033[0m")
+            order_shoes.place_order()
+        elif check_other == 2:
             exit_app.exit_app()
 
     if var_global.report == 'yes' or var_global.report == 'y':
@@ -49,11 +50,33 @@ def check_fit():
             if order:
                 break
             else:
-                print(Fore.RED + "Cannot be empty\033[0m")
+                print(Fore.RED + "required field\033[0m")
 
         if order == 'yes' or order == 'y':
             order_shoes.place_order()
-        else:
-            print(Fore.GREEN + "\nTHANKS FOR VISITING TOP_G'z ONLINE SHOE SHOP :)\033[0m"
-                  + Fore.BLUE + "\nHope to see you again soon\033[0m")
-            exit_app.exit_app()
+        elif order == "no" or order == "n":
+
+            while True:
+                try:
+                    choice = {
+                        "1": "Back to main menu",
+                        "2": "Exit"
+                    }
+                    time.sleep(0.6)
+                    print(Fore.YELLOW + f"1: {choice['1']}\n" + Fore.RED + f"2: {choice['2']}"
+                          + Style.RESET_ALL)
+                    continue_exit = int(input().strip())
+                    if continue_exit < 1 or continue_exit > 2:
+                        raise ValueError
+                    break  # exit the loop if the input is valid
+                except ValueError:
+                    print(Fore.RED + "Invalid choice" + Style.RESET_ALL)
+
+            if continue_exit == 1:
+                brands.print_brands()
+                brand_choose.choose_brand()
+                display_conditions.print_shoes()
+                check_fit()
+                order_shoes.place_order()
+            elif continue_exit == 2:
+                exit_app.exit_app()
