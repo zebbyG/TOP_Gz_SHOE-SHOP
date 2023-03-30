@@ -4,7 +4,7 @@ from credentials import var_global
 init()
 
 
-def display_vans() -> str:
+def display_vans():
     """
     :return: vans shoes
     """

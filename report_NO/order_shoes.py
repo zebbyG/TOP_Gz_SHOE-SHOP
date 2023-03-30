@@ -26,7 +26,8 @@ def place_order():
         while loop to make sure you enter a choice
         """
         try:
-            print(Fore.LIGHTMAGENTA_EX + f"\nHow many pairs of {var_global.type_shoe} do you want\n[enter-number]" + Style.RESET_ALL)
+            print(Fore.LIGHTMAGENTA_EX + f"\nHow many pairs of {var_global.type_shoe} do you want\n[enter-number]"
+                  + Style.RESET_ALL)
             var_global.order_amount = int(input())
             if var_global.order_amount < 1:
                 raise ValueError

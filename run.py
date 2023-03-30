@@ -1,6 +1,6 @@
 from colorama import init, Fore, Style
 import time
-from credentials import create_account, log_in, exit_app, var_global, del_user_credentials
+from credentials import create_account, log_in, exit_app, var_global
 from brand_shoes import brands, display_conditions
 from report_NO import brand_choose, fit_check
 init()
@@ -98,8 +98,8 @@ if choose_service == 2:
     print("=" * 50)
     print(Fore.BLUE + "COMING SOON" + Style.RESET_ALL)
     print("=" * 50)
-    print(Fore.RED + "Trading with us is not implemented yet, kindly ORDER SHOES" + Style.RESET_ALL)
-    print(Fore.YELLOW + "redirecting to ORDER SHOES...\n\n\n" + Style.RESET_ALL)
+    print(Fore.RED + "Trading with us is not implemented yet, kindly VIEW SHOES" + Style.RESET_ALL)
+    print(Fore.YELLOW + "redirecting to VIEW SHOES...\n\n\n" + Style.RESET_ALL)
     for z in range(5):
         time.sleep(1)
     brands.print_brands()
@@ -109,8 +109,8 @@ if choose_service == 3:
     print(Fore.BLUE + "COMING SOON" + Style.RESET_ALL)
     print("=" * 50)
     print(
-        Fore.RED + "Unlock discount is not implemented yet, kindly ORDER SHOES" + Style.RESET_ALL)
-    print(Fore.YELLOW + "redirecting to ORDER SHOES...\n\n\n" + Style.RESET_ALL)
+        Fore.RED + "Unlock discount is not implemented yet, kindly VIEW SHOES" + Style.RESET_ALL)
+    print(Fore.YELLOW + "redirecting to VIEW SHOES...\n\n\n" + Style.RESET_ALL)
     for z in range(5):
         time.sleep(1)
     brands.print_brands()
