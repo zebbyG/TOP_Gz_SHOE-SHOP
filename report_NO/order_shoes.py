@@ -107,8 +107,8 @@ def place_order():
     elif continue_exit == 3:
         exit_app.exit_app()
 
-    print(Fore.LIGHTBLUE_EX + "placing your order...")
-    time.sleep(3)
+    print(Fore.LIGHTBLUE_EX + "loading order details...")
+    time.sleep(2)
     order = {
         "name": var_global.new_user_name,
         "location": location,
@@ -132,10 +132,13 @@ def place_order():
         add_pradas = {"Total Amount": f"${int(var_global.pradas[var_global.type_shoe]) * var_global.order_amount}"}
         order.update(add_pradas)
 
-    print(Fore.YELLOW + "loading order details...\n" + Style.RESET_ALL)
-    time.sleep(2)
     for key, value in order.items():
         print(key + ": " + Fore.LIGHTMAGENTA_EX + str(value) + Style.RESET_ALL)
+    time.sleep(3.5)
+
+    print(Fore.LIGHTBLUE_EX + "placing your order")
+
+    time.sleep(2.5)
 
     print(Fore.YELLOW + "\nconfirming your order...\n")
     time.sleep(3)
@@ -145,13 +148,13 @@ def place_order():
           Fore.GREEN + f" your order for {var_global.order_amount} pair[s] of {var_global.type_shoe} shoe[s]"
                        f" has been successfully placed on\033[0m",
           z.strftime("%A %d %b %Y at %H:%M:%S"))
-    time.sleep(2)
+    time.sleep(2.5)
     print(Fore.LIGHTMAGENTA_EX + f"\nWe will contact you through your email {var_global.user_email} "
                                  f"for more information on your order.\033[0m")
     time.sleep(1.5)
     print(Fore.GREEN + "\nTHANKS FOR VISITING TOP_G'z ONLINE SHOE SHOP :)\033[0m"
           + Fore.BLUE + "\nHope to see you again soon\033[0m")
 
-    time.sleep(2)
+    time.sleep(2.5)
 
     exit_app.exit_app()
