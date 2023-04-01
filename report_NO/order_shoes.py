@@ -86,7 +86,7 @@ def place_order():
                 "2": "Back to main menu",
                 "3": "Exit"
             }
-            time.sleep(0.6)
+            time.sleep(1)
             print(Fore.GREEN + f"1: {choice['1']}\n" + Fore.YELLOW + f"2: {choice['2']}\n"
                   + Fore.RED + f"3: {choice['3']}" + Style.RESET_ALL)
             continue_exit = int(input().strip())
@@ -107,9 +107,10 @@ def place_order():
     elif continue_exit == 3:
         exit_app.exit_app()
 
-    print(Fore.LIGHTBLUE_EX + "loading order details...")
+    print(Fore.LIGHTBLUE_EX + "\nloading order details..." + Style.RESET_ALL)
     time.sleep(2)
     order = {
+        "Email": var_global.user_email,
         "name": var_global.new_user_name,
         "location": location,
         "Brand": var_global.brand[str(var_global.pick)],
@@ -132,11 +133,15 @@ def place_order():
         add_pradas = {"Total Amount": f"${int(var_global.pradas[var_global.type_shoe]) * var_global.order_amount}"}
         order.update(add_pradas)
 
+    print(Fore.LIGHTGREEN_EX + f"\nOrder details for {var_global.new_user_name}:" + Style.RESET_ALL)
+
+    time.sleep(1.5)
+
     for key, value in order.items():
         print(key + ": " + Fore.LIGHTMAGENTA_EX + str(value) + Style.RESET_ALL)
     time.sleep(3.5)
 
-    print(Fore.LIGHTBLUE_EX + "placing your order")
+    print(Fore.LIGHTBLUE_EX + "\nplacing your order...")
 
     time.sleep(2.5)
 
