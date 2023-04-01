@@ -110,16 +110,16 @@ def create_account():
 
     # TO PRINT AND DELETE USER CREDENTIALS IN 9 SECONDS
     print(del_user_credentials.print_and_delete(Fore.RED + "\nCOPY YOUR CREDENTIALS SOMEWHERE SAFE:\n" + Style.RESET_ALL
-                                                + "\nCreating account for " + Fore.LIGHTMAGENTA_EX + f"{var_global.user_email}"
-                                                + Style.RESET_ALL + " with username " + Fore.GREEN +
-                                                f"{var_global.new_user_name}" + Style.RESET_ALL + " and password " +
-                                                Fore.LIGHTBLUE_EX + f"{var_global.password}\n" + Fore.LIGHTYELLOW_EX +
-                                                "creating your account...\n" + Style.RESET_ALL,
+                                                + "\nCreating account for " + Fore.LIGHTMAGENTA_EX
+                                                + f"{var_global.user_email}" + Style.RESET_ALL + " with username " +
+                                                Fore.GREEN + f"{var_global.new_user_name}" + Style.RESET_ALL +
+                                                " and password " + Fore.LIGHTBLUE_EX + f"{var_global.password}\n" +
+                                                Fore.LIGHTYELLOW_EX + "creating your account...\n" + Style.RESET_ALL,
 
                                                 Fore.RED + "Copy your credentials somewhere safe" + Style.RESET_ALL +
-                                                "Account created for " + Fore.YELLOW + f"{var_global.user_email}" + Style.RESET_ALL
-                                                + " with username " + Fore.GREEN + f"{var_global.new_user_name}"
-                                                + Style.RESET_ALL +
+                                                "Account created for " + Fore.YELLOW + f"{var_global.user_email}"
+                                                + Style.RESET_ALL + " with username " + Fore.GREEN +
+                                                f"{var_global.new_user_name}" + Style.RESET_ALL +
                                                 " and password " + Fore.LIGHTBLUE_EX + f"{var_global.password}"
                                                 + Style.RESET_ALL, 8))
 
@@ -129,14 +129,16 @@ def create_account():
     confirm_credentials = input().strip().lower()
     if confirm_credentials == "y":
         # TO PRINT AND DELETE USER CREDENTIALS AGAIN IN 5 SECONDS
-        print(del_user_credentials.print_and_delete(f"username:" + Fore.GREEN +
+        print(del_user_credentials.print_and_delete(f"Account for" + Fore.LIGHTMAGENTA_EX + f"{var_global.user_email} "
+                                                    + Style.RESET_ALL + f"with:\nusername: " + Fore.GREEN +
                                                     f"{var_global.created_accounts[var_global.user_email]['username']}"
-                                                    + Style.RESET_ALL
-                                                    + f"\npassword:" + Fore.LIGHTBLUE_EX +
+                                                    + Style.RESET_ALL + f"\npassword: " + Fore.LIGHTBLUE_EX +
                                                     f"{var_global.created_accounts[var_global.user_email]['password']}"
-                                                    + Style.RESET_ALL, f"username:" + Fore.GREEN +
+                                                    + Style.RESET_ALL,
+
+                                                    f"Account for" + Fore.LIGHTMAGENTA_EX + f"{var_global.user_email} "
+                                                    + Style.RESET_ALL + f"with:\nusername:" + Fore.GREEN +
                                                     f"{var_global.created_accounts[var_global.user_email]['username']}"
-                                                    + Style.RESET_ALL
-                                                    + f"password:" + Fore.LIGHTBLUE_EX +
+                                                    + Style.RESET_ALL + f"password:" + Fore.LIGHTBLUE_EX +
                                                     f"{var_global.created_accounts[var_global.user_email]['password']}"
                                                     + Style.RESET_ALL, 5))
