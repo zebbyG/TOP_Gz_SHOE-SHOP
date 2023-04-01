@@ -129,7 +129,7 @@ def create_account():
     confirm_credentials = input().strip().lower()
     if confirm_credentials == "y":
         # TO PRINT AND DELETE USER CREDENTIALS AGAIN IN 5 SECONDS
-        print(del_user_credentials.print_and_delete(f"Account for" + Fore.LIGHTMAGENTA_EX + f"{var_global.user_email} "
+        print(del_user_credentials.print_and_delete(f"Account for " + Fore.LIGHTMAGENTA_EX + f"{var_global.user_email} "
                                                     + Style.RESET_ALL + f"with:\nusername: " + Fore.GREEN +
                                                     f"{var_global.created_accounts[var_global.user_email]['username']}"
                                                     + Style.RESET_ALL + f"\npassword: " + Fore.LIGHTBLUE_EX +
