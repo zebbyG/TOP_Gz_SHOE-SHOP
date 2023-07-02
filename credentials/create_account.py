@@ -77,7 +77,7 @@ def create_account():
             # VISIBLE PASSWORD INPUT
             while True:
                 try:
-                    print(Fore.LIGHTMAGENTA_EX + "\nEnter password\n" + Style.RESET_ALL)
+                    print(Fore.LIGHTMAGENTA_EX + "\nCreate password\n" + Style.RESET_ALL)
                     var_global.password = input().strip()
                     if len(var_global.password) < 8:
                         raise ValueError
@@ -109,19 +109,33 @@ def create_account():
     }
 
     # TO PRINT AND DELETE USER CREDENTIALS IN 9 SECONDS
-    print(del_user_credentials.print_and_delete(Fore.RED + "\nCOPY YOUR CREDENTIALS SOMEWHERE SAFE:\n" + Style.RESET_ALL
-                                                + "\nCreating account for " + Fore.LIGHTMAGENTA_EX
-                                                + f"{var_global.user_email}" + Style.RESET_ALL + " with username " +
-                                                Fore.GREEN + f"{var_global.new_user_name}" + Style.RESET_ALL +
-                                                " and password " + Fore.LIGHTBLUE_EX + f"{var_global.password}\n" +
-                                                Fore.LIGHTYELLOW_EX + "creating your account...\n" + Style.RESET_ALL,
+    if see_password == "yes":
+        print(del_user_credentials.print_and_delete(Fore.RED + "\nCOPY YOUR CREDENTIALS SOMEWHERE SAFE:\n" + Style.RESET_ALL
+                                                    + "\nCreating account for " + Fore.LIGHTMAGENTA_EX
+                                                    + f"{var_global.user_email}" + Style.RESET_ALL + " with username " +
+                                                    Fore.GREEN + f"{var_global.new_user_name}" + Style.RESET_ALL +
+                                                    " and password " + Fore.LIGHTBLUE_EX + f"{var_global.password}\n" +
+                                                    Fore.LIGHTYELLOW_EX + "creating your account...\n" + Style.RESET_ALL,
 
-                                                Fore.RED + "Copy your credentials somewhere safe" + Style.RESET_ALL +
-                                                "Account created for " + Fore.YELLOW + f"{var_global.user_email}"
-                                                + Style.RESET_ALL + " with username " + Fore.GREEN +
-                                                f"{var_global.new_user_name}" + Style.RESET_ALL +
-                                                " and password " + Fore.LIGHTBLUE_EX + f"{var_global.password}"
-                                                + Style.RESET_ALL, 8))
+                                                    Fore.RED + "Copy your credentials somewhere safe" + Style.RESET_ALL +
+                                                    "Account created for " + Fore.YELLOW + f"{var_global.user_email}"
+                                                    + Style.RESET_ALL + " with username " + Fore.GREEN +
+                                                    f"{var_global.new_user_name}" + Style.RESET_ALL +
+                                                    " and password " + Fore.LIGHTBLUE_EX + f"{var_global.password}"
+                                                    + Style.RESET_ALL, 8))
+    else:
+        print(del_user_credentials.print_and_delete("\nCreating account for " + Fore.LIGHTMAGENTA_EX
+                                                    + f"{var_global.user_email}" + Style.RESET_ALL + " with username " +
+                                                    Fore.GREEN + f"{var_global.new_user_name}" + Style.RESET_ALL +
+                                                    " and password " + Fore.LIGHTBLUE_EX + "*" * len(var_global.password) + "\n" +
+                                                    Fore.LIGHTYELLOW_EX + "creating your account...\n" + Style.RESET_ALL,
+
+                                                    Fore.RED + "Copy your credentials somewhere safe" + Style.RESET_ALL +
+                                                    "Account created for " + Fore.YELLOW + f"{var_global.user_email}"
+                                                    + Style.RESET_ALL + " with username " + Fore.GREEN +
+                                                    f"{var_global.new_user_name}" + Style.RESET_ALL +
+                                                    " and password " + Fore.LIGHTBLUE_EX + "*" * len(var_global.password)
+                                                    + Style.RESET_ALL, 5))
 
     print("confirm your credentials" + Fore.YELLOW + "[y]" + Style.RESET_ALL
           + "\ncontinue" + Fore.GREEN + "[n]" + Style.RESET_ALL)
