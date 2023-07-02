@@ -52,7 +52,7 @@ def create_account():
             while True:
                 # INVISIBLE PASSWORD INPUT
                 try:
-                    var_global.password = getpass.getpass(prompt=Fore.LIGHTMAGENTA_EX + '\nEnter password\n'
+                    var_global.password = getpass.getpass(prompt=Fore.LIGHTMAGENTA_EX + '\nCreate password\n'
                                                           + Style.RESET_ALL, stream=None)
                     if len(var_global.password) < 8:
                         raise ValueError
