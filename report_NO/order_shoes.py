@@ -157,7 +157,7 @@ def place_order():
     print(Fore.LIGHTMAGENTA_EX + f"\nWe will contact you through your email {var_global.user_email} "
                                  f"for more information on your order.\033[0m")
     time.sleep(1.5)
-    print(Fore.GREEN + "\nTHANKS FOR VISITING TOP_G'z ONLINE SHOE SHOP :)\033[0m"
+    print(Fore.GREEN + "\nTHANK YOU FOR VISITING TOP_G'z ONLINE SHOE SHOP :)\033[0m"
           + Fore.BLUE + "\nHope to see you again soon\033[0m")
 
     time.sleep(2.5)
